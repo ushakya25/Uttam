@@ -1,0 +1,84 @@
+<html>
+    <head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    width: 100%;
+    height: 120px;
+    
+    background-image: url("https://uhgazure.sharepoint.com/sites/OpenOfficeConnectTest/ClientSideAssets/2de08773-fe57-4ffb-b4b9-e2018ea3a13f/orange-bg_1ae1973816c7d18eab0bc9111712e506.jpg");
+    background-repeat: no-repeat;
+    /* background-position: cover; */
+    /* background-size: cover;    */
+    background-position: right;
+    color: #f68d40;
+}
+
+.details{
+    width: 100%;
+    height: 120px;
+    border: 2px solid;
+}
+.br{
+    width: 100%;
+    height: 20px;
+    background:#54565a;
+}
+
+.heading{
+    margin-left: 200px;
+    width: 250px;
+    height: 70px;
+    /* border: 2px solid; */
+    float: left;
+    margin-top: 9px;
+    padding-top: 31px;
+}
+</style>
+    </head>
+<body>
+<!--Nav bar Start Here-->
+<div class="navbar">
+
+<h1>Open Office Hour</h1>
+</div>
+<!--Nav bar end here-->
+<div class="br">
+
+</div>
+<div class="details">
+    <div class="heading">
+        <p>User name:</p>
+        <h3>Uttam Shakya</h3>
+    </div>
+    <div class="heading">
+        <p>User email ID:</p>
+        <h3>uttam_shakya@optum.com</h3>
+    </div>
+    <div class="heading">
+        <p>Meeting Slot:</p><br>
+        <select id="time-slot" style="width: 200px; height: 30px" >
+            <option value="0">Select Slot</option>
+            <option value="1">Slot 1 (5:00 PM - 5:10 PM)</option>
+            <option value="2">Slot 2 (5:15 PM - 5:25 PM)</option>
+            <option value="3">Slot 3 (5:30 PM - 5:40 PM)</option>
+            <option value="4">Slot 4 (5:45 PM - 5:55 PM)</option>
+            <option value="5">Slot 5 (Wait List)</option>
+            <option value="6">Slot 6 (Wait List)</option>
+        </select>
+    </div>
+</div>
+
+<script>
+let opt = document.getElementById("time-slot").getElementsByTagName("option");
+for(let i=0; i<opt.length; i++){
+    console.log(opt[i]);
+    opt[2].disabled = true;
+}
+</script>
+
+</body>
+</html>
